@@ -12,7 +12,7 @@
        <class name="testscript.QALegendItemPageTest"/>
        <class name="testscript.QALegendSignUpPageTest"/>
        <class name="testscript.QALegendTeamMembersPageTest"/>-->
-       <class name="testscript.QALegendTeamMembersPageTest"/>
+       <class name="testscript.QALegendSignUpPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

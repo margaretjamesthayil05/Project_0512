@@ -14,11 +14,11 @@ public class ScreenShotUtility {
 	public void captureFailedScreenshots(WebDriver driver,String name ) throws IOException {
 		TakesScreenshot sShot = (TakesScreenshot)driver;
 		File screenShot = sShot.getScreenshotAs(OutputType.FILE);
-		File f1 = new File(System.getProperty("user.dir")+"\\screenshot-output");
+		File f1 = new File(System.getProperty("user.dir")+"//screenshot-output");
 		if(!f1.exists()) {
 			f1.mkdir();
 		}
-		File finalDestination = new File(System.getProperty("user.dir")+"\\screenshot-output\\"+name+".png");
+		File finalDestination = new File(System.getProperty("user.dir")+"//screenshot-output//"+name+".png");
 		Files.copy(screenShot, finalDestination);
 	}
 }
