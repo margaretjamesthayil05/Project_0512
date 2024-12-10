@@ -1,6 +1,7 @@
 package testscript;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -9,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
@@ -16,6 +19,7 @@ import constants.Constants;
 import pages.QALegendNotesPage;
 import pages.QALegendSignUpPage;
 import pages.QALegendTeamMembersPage;
+import utilities.ScreenShotUtility;
 import pages.QALegendClientPage;
 import pages.QALegendHomePage;
 import pages.QALegendItemsPage;
@@ -60,5 +64,15 @@ public class Base {
 		signUpPage = new QALegendSignUpPage(driver);
 		teamMembersPage = new QALegendTeamMembersPage(driver);
 			
+	}
+	@AfterMethod
+	public void afterMethod(ITestResult itResult) throws IOException {
+		if(itResult.getStatus()==ITestResult.FAILURE) {
+			ScreenShotUtility sc = new ScreenShotUtility();
+			sc.captureFailedScreenshots(driver, itResult.getName());
+		}
+		if(driver!=null) {
+			driver.quit();
+		}
 	}
 }
