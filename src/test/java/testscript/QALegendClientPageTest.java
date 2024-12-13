@@ -21,7 +21,7 @@ public class QALegendClientPageTest extends Base{
 		Assert.assertEquals(clientsPage.getCompanyName(),companyName);
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2,retryAnalyzer = retry.RetryAnalyzer.class)
 	public void editClient() throws InterruptedException {
 		loginPage.LoginToQALegent(properties.getProperty("USERNAME"),properties.getProperty("PASSWORD"));
 		homePage.clickOnClientMenuButton();

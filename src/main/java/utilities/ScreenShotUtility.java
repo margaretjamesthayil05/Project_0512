@@ -12,6 +12,7 @@ import com.google.common.io.Files;
 
 public class ScreenShotUtility {
 	public void captureFailedScreenshots(WebDriver driver,String name ) throws IOException {
+		System.out.println("Inside captureFailedScreenshots");
 		TakesScreenshot sShot = (TakesScreenshot)driver;
 		File screenShot = sShot.getScreenshotAs(OutputType.FILE);
 		File f1 = new File(System.getProperty("user.dir")+"//screenshot-output");

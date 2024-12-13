@@ -6,13 +6,13 @@
 <parameter name="browser" value="chrome"></parameter>
   <test thread-count="5" name="Test">
     <classes>
-    <!--<class name="testscript.QALegendLoginPageTest"/>
-      class name="testscript.QALegendNotePageTest"/>
+   <class name="testscript.QALegendLoginPageTest"/>
+      <!-- class name="testscript.QALegendNotePageTest"/>
        <class name="testscript.QALegendClientPageTest"/>
        <class name="testscript.QALegendItemPageTest"/>
        <class name="testscript.QALegendSignUpPageTest"/>
        <class name="testscript.QALegendTeamMembersPageTest"/>-->
-       <class name="testscript.QALegendSignUpPageTest"/>
+       
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+    </test>
+  </suite> <!-- Suite -->

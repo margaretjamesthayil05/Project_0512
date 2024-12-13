@@ -19,6 +19,6 @@ public class QALegendSignUpPageTest extends Base{
 		signUpPage.clickOnSignUpBtn();
 		signUpPage.clickOnSignInButton();
 		loginPage.LoginToQALegent(email,password);
-		AssertJUnit.assertEquals(loginPage.isUserNameDisplayed(),true);
+		Assert.assertEquals(loginPage.isUserNameDisplayed(),true);
 	}
 }

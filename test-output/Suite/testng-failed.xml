@@ -10,6 +10,7 @@
       <class name="testscript.QALegendSignUpPageTest">
         <methods>
           <include name="SignUp"/>
+          <include name="afterMethod"/>
           <include name="browserInitialization"/>
         </methods>
       </class> <!-- testscript.QALegendSignUpPageTest -->
