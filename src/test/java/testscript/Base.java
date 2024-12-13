@@ -13,6 +13,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import constants.Constants;
@@ -38,7 +39,7 @@ public class Base {
 	QALegendTeamMembersPage teamMembersPage;
 	@BeforeMethod(alwaysRun = true)
 	@Parameters({"browser"})
-	public void browserInitialization(String browserName) throws Exception {//browserName gets value now from @Parameters({"browser"})
+	public void browserInitialization(@Optional("chrome")String browserName) throws Exception {//browserName gets value now from @Parameters({"browser"})
 		properties = new Properties();
 		fis = new FileInputStream(Constants.CONFIGFILE);
 		properties.load(fis);

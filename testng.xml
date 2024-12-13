@@ -3,16 +3,10 @@
   <listeners>
   	<listener class-name="testscript.Listeners"></listener>
   </listeners>
+   <parameter name="browser" value="chrome"></parameter>
   <test thread-count="5" name="Test">
-  <parameter name="browser" value="chrome"></parameter>
     <classes>
    <class name="testscript.QALegendLoginPageTest"/>
-      <!-- class name="testscript.QALegendNotePageTest"/>
-       <class name="testscript.QALegendClientPageTest"/>
-       <class name="testscript.QALegendItemPageTest"/>
-       <class name="testscript.QALegendSignUpPageTest"/>
-       <class name="testscript.QALegendTeamMembersPageTest"/>-->
-       
     </classes>
     </test>
   </suite> <!-- Suite -->
