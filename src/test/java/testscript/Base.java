@@ -37,7 +37,7 @@ public class Base {
 	QALegendSignUpPage signUpPage;
 	QALegendTeamMembersPage teamMembersPage;
 	@BeforeMethod(alwaysRun = true)
-	@Parameters("browser")
+	@Parameters({"browser"})
 	public void browserInitialization(String browserName) throws Exception {//browserName gets value now from @Parameters({"browser"})
 		properties = new Properties();
 		fis = new FileInputStream(Constants.CONFIGFILE);
