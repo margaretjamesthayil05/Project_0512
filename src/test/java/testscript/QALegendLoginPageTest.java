@@ -44,34 +44,4 @@ public class QALegendLoginPageTest extends Base{
 		 return array;
 	}
 	
-	/*@Test
-	private void LoginTest() throws IOException {
-		int j=0,k=1;
-		 Object[][] array = new String[4][2];
-		 for (int x = 0; x < 4; x++) { // Outer loop for rows
-				String username = ExcelUtility.getStringData(x, j, "//src//main//resources//TestInputData.xlsx", "LoginInputs");
-				int psd = ExcelUtility.getIntData(x, k, "//src//main//resources//TestInputData.xlsx", "LoginInputs");
-				String password = Integer.toString(psd);
-				System.out.println(username);
-				System.out.println(password);
-			     array[x][j] = username; // Assign value
-			     array[x][k] = password;
-			       
-		 }
-	        // Print 
-	        System.out.println("2D String Array:");
-	        for (int i = 0; i < 4; i++) {
-	            for (int p = 0; p < 2; p++) {
-	                System.out.print(array[i][p] + "\t"); 
-	            }
-	            System.out.println(); // Newline after each row
-	        }
-				
-//				loginPage.LoginToQALegent(username, password);
-//				loginPage.isUserNameDisplayed();
-//				System.out.println(loginPage.isUserNameDisplayed());
-				//Assert.assertEquals(loginPage.isUserNameDisplayed(),true);
-	}*/
-	
-
 }

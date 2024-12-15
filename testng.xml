@@ -6,7 +6,12 @@
    <parameter name="browser" value="chrome"></parameter>
   <test thread-count="5" name="Test">
     <classes>
-   <class name="testscript.QALegendLoginPageTest"/>
+    <class name="testscript.QALegendLoginPageTest"/>
+    <class name="testscript.QALegendSignUpPageTest"/>
+    <class name="testscript.QALegendNotePageTest"/>
+    <class name="testscript.QALegendItemPageTest"/>
+    <class name="testscript.QALegendClientPageTest"/>
+   <class name="testscript.QALegendTeamMembersPageTest"/>
     </classes>
     </test>
   </suite> <!-- Suite -->
